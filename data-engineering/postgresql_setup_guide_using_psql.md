@@ -28,6 +28,15 @@ the following command:
 \x
 ```
 
+or 
+
+```
+\x auto
+```
+
+Auto will let the the cli choose what it thinks is the best output based 
+on the data output;
+
 This will format the output vertically, which will make it easier to read
 things.
 _______________________________________________________________________________
@@ -49,7 +58,7 @@ _______________________________________________________________________________
 To view more of these commands:
 
 ```
-\h
+\?
 ```
 
 _______________________________________________________________________________
@@ -164,6 +173,8 @@ The `-f` stands for file
 The `-s` stands for echo (This will display the commands that are being 
 executed during the import)
 
+Note: This command should be run from your regular shell, and 
+NOT the postgres interactive shell:
 ```
 psql -U "dezly-macauley" -d "demo" -f ./mp_demo_data -e
 ```
@@ -173,7 +184,7 @@ _______________________________________________________________________________
 To login to the import database
 
 ```
-psql -U "dezly-macauley" -d "demo"
+psql -U "dezly-macauley" -d "demo";
 ```
 
 To confirm that you are logged as the correct user and connected to the 
